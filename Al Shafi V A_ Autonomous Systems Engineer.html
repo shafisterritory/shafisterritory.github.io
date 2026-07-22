@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)index.html -->
+<html lang="en" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Shafi V A — Autonomous Systems Engineer</title>
+<meta name="description" content="Robotics engineer and M.Sc. Autonomous Systems student at Hochschule Bonn-Rhein-Sieg. Navigation, perception, sensor fusion, and human-robot interaction.">
+
+<meta property="og:title" content="Al Shafi V A — Autonomous Systems Engineer">
+<meta property="og:description" content="Navigation, perception, and sensor fusion for robots that work in the real world.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="stylesheet" href="./Al Shafi V A — Autonomous Systems Engineer_files/style.css">
+</head>
+<body>
+
+<!-- ─── skip link ─────────────────────────────────────────── -->
+<a href="index.html#main" class="skip">Skip to content</a>
+
+<!-- ─── nav ───────────────────────────────────────────────── -->
+<header class="nav is-stuck" id="nav">
+  <div class="nav__inner">
+    <a href="index.html#top" class="nav__mark" aria-label="Home">
+      <span class="nav__mark-dot" aria-hidden="true"></span>
+      <span class="nav__mark-text">Al Shafi</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html#work" class="">Work</a>
+      <a href="index.html#research" class="">Research</a>
+      <a href="index.html#path" class="">Path</a>
+      <a href="index.html#about" class="">About</a>
+      <a href="index.html#contact" class="">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.4v2.6M12 19v2.6M2.4 12h2.6M19 12h2.6M5.2 5.2l1.9 1.9M16.9 16.9l1.9 1.9M18.8 5.2l-1.9 1.9M7.1 16.9l-1.9 1.9"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1z"></path></svg>
+      </button>
+      <a class="btn btn--sm" href="assets/Al_Shafi_VA_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </div>
+  </div>
+  <div class="nav__progress" id="navProgress" aria-hidden="true" style="--p: 0.0198;"></div>
+</header>
+
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ─── hero ──────────────────────────────────────────────── -->
+<section class="hero">
+  <canvas class="hero__canvas" id="lidar" aria-hidden="true" width="1600" height="1286"></canvas>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow is-in" data-reveal="">
+      <span class="pulse" aria-hidden="true"></span>
+      Bonn, Germany · open to 2026 roles
+    </p>
+
+    <h1 class="hero__name is-in" data-reveal="" data-reveal-delay="1">
+      <span class="hero__line">Al&nbsp;Shafi</span> <span class="hero__line hero__line--muted">V&nbsp;A</span>
+    </h1>
+
+    <p class="hero__tagline is-in" data-reveal="" data-reveal-delay="2">
+      I build the perception and navigation stacks that let robots
+      understand where they are, what is around them, and where to go next.
+    </p>
+
+    <div class="hero__cta is-in" data-reveal="" data-reveal-delay="3">
+      <a class="btn btn--primary" href="index.html#work">
+        See the work
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M3 9.5 8 14.5l5-5"></path></svg>
+      </a>
+      <a class="btn" href="index.html#research">Read the paper</a>
+    </div>
+
+    <dl class="hero__stats is-in" data-reveal="" data-reveal-delay="4">
+      <div><dt>Experience</dt><dd><span data-count="3">3</span>+ yrs</dd></div>
+      <div><dt>Shipped projects</dt><dd><span data-count="7">7</span></dd></div>
+      <div><dt>Junction 2025</dt><dd>1<sup>st</sup> prize</dd></div>
+    </dl>
+  </div>
+
+  <div class="hero__readout" aria-hidden="true">
+    <div class="readout__row"><span>scan</span><b id="roScan">2D LiDAR · 360°</b></div>
+    <div class="readout__row"><span>points</span><b id="roPoints">1208</b></div>
+    <div class="readout__row"><span>clusters</span><b id="roClusters">3</b></div>
+    <div class="readout__hint">move your cursor into the scan</div>
+  </div>
+
+  <a href="index.html#work" class="hero__scroll" aria-label="Scroll to work">
+    <span class="hero__scroll-line" aria-hidden="true"></span>
+  </a>
+</section>
+
+
+<!-- ─── marquee / skills ribbon ───────────────────────────── -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon__track">
+    <span>ROS 2</span><i>·</i><span>SLAM</span><i>·</i><span>Sensor Fusion</span><i>·</i>
+    <span>Path Planning</span><i>·</i><span>YOLO</span><i>·</i><span>Point Clouds</span><i>·</i>
+    <span>Kalman Filters</span><i>·</i><span>Isaac Sim</span><i>·</i><span>Jetson</span><i>·</i>
+    <span>MoveIt</span><i>·</i><span>CARLA</span><i>·</i><span>Gazebo</span><i>·</i>
+    <span>ROS 2</span><i>·</i><span>SLAM</span><i>·</i><span>Sensor Fusion</span><i>·</i>
+    <span>Path Planning</span><i>·</i><span>YOLO</span><i>·</i><span>Point Clouds</span><i>·</i>
+    <span>Kalman Filters</span><i>·</i><span>Isaac Sim</span><i>·</i><span>Jetson</span><i>·</i>
+    <span>MoveIt</span><i>·</i><span>CARLA</span><i>·</i><span>Gazebo</span><i>·</i>
+  </div>
+</div>
+
+
+<!-- ─── intro statement ───────────────────────────────────── -->
+<section class="statement">
+  <p class="statement__body is-in" data-reveal="">
+    <span>Three years</span> building navigation, perception and human-robot
+    interaction for service robots, semi-humanoids and autonomous vehicles 
+    from <span>point cloud</span> to <span>planned trajectory</span>, in simulation
+    and on hardware that has to work in a room full of people.
+  </p>
+</section>
+
+
+<!-- ─── work ──────────────────────────────────────────────── -->
+<section class="section" id="work">
+  <div class="section__head">
+    <p class="kicker is-in" data-reveal=""><span class="kicker__num">01</span> Selected work</p>
+    <h2 class="section__title is-in" data-reveal="" data-reveal-delay="1">
+      Seven projects, one thread:<br>
+      <em>making machines aware of their surroundings.</em>
+    </h2>
+  </div>
+
+  <div class="filters is-in" data-reveal="" role="tablist" aria-label="Filter projects by discipline">
+    <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All <b>7</b></button>
+    <button class="filter" data-filter="perception" role="tab" aria-selected="false">Perception <b>4</b></button>
+    <button class="filter" data-filter="navigation" role="tab" aria-selected="false">Navigation <b>4</b></button>
+    <button class="filter" data-filter="learning" role="tab" aria-selected="false">Learning <b>2</b></button>
+    <button class="filter" data-filter="systems" role="tab" aria-selected="false">Systems <b>2</b></button>
+  </div>
+
+  <div class="grid" id="projectGrid">
+
+    <!-- 1 -->
+    <article class="card card--wide is-in" data-tags="perception navigation learning" data-reveal="">
+      <div class="card__media">
+        <img src="assets/projects/racing.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><path d="M6 52 Q30 8 60 30 T114 14"></path><circle cx="20" cy="40" r="2"></circle><circle cx="42" cy="22" r="2"></circle><circle cx="66" cy="31" r="2"></circle><circle cx="90" cy="22" r="2"></circle><circle cx="30" cy="52" r="2"></circle><circle cx="54" cy="38" r="2"></circle><circle cx="78" cy="40" r="2"></circle><circle cx="102" cy="30" r="2"></circle></svg>
+          <span>assets/projects/racing.jpg</span>
+        </div>
+        <span class="badge badge--live">Ongoing</span>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">BRS Motorsport · Formula Student · HBRS</p>
+        <h3 class="card__title">Autonomous Racing Car Perception &amp; Planning</h3>
+        <p class="card__text">
+          Building the full perception-to-planning pipeline for a driverless
+          Formula Student car. ML-based clustering over raw LiDAR point clouds
+          detects track cones; a trajectory generator then fits the optimal
+          racing line between the left and right cone boundaries.
+        </p>
+        <ul class="chips"><li>LiDAR</li><li>Clustering</li><li>Trajectory Opt.</li><li>ROS 2</li></ul>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card is-in" data-tags="perception navigation" data-reveal="" data-reveal-delay="1">
+      <div class="card__media">
+        <img src="assets/projects/hsr.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><rect x="46" y="18" width="28" height="30" rx="4"></rect><circle cx="60" cy="12" r="7"></circle><path d="M40 34h-14M94 34h-14"></path></svg>
+          <span>assets/projects/hsr.jpg</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">Toyota HSR · ROS 2</p>
+        <h3 class="card__title">Human Detection &amp; Task Sequencing</h3>
+        <p class="card__text">
+          A perception pipeline fusing depth camera and LiDAR for real-time person
+          and hand-gesture detection with a custom YOLO model. A priority-queue
+          task sequencer drives autonomous navigation and manipulator control for
+          goal-directed delivery in an <em>unmapped</em> environment.
+        </p>
+        <ul class="chips"><li>YOLO</li><li>Depth</li><li>MoveIt</li><li>Task Planning</li></ul>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card is-in" data-tags="perception learning" data-reveal="" data-reveal-delay="2">
+      <div class="card__media">
+        <img src="assets/projects/anomaly.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><rect x="24" y="14" width="72" height="34" rx="3"></rect><path d="M54 26h14v10H54z" class="hot"></path><path d="M24 40h72"></path></svg>
+          <span>assets/projects/anomaly.jpg</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">Deep Learning · MVTec AD</p>
+        <h3 class="card__title">Explainable Anomaly Detection on the Assembly Line</h3>
+        <p class="card__text">
+          A deep model that detects <em>and localises</em> defects in assembly-line
+          components, with Grad-CAM overlays so a quality inspector can see exactly
+          which pixels drove the call. Explainability was the point — a black-box
+          reject is useless on a factory floor.
+        </p>
+        <ul class="chips"><li>PyTorch</li><li>Grad-CAM</li><li>Segmentation</li></ul>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card is-in" data-tags="navigation" data-reveal="">
+      <div class="card__media">
+        <img src="assets/projects/nav-stack.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><path d="M12 48h20v-16h20v-12h24v-8h32" class="dash"></path><circle cx="12" cy="48" r="3"></circle><circle cx="108" cy="12" r="3"></circle></svg>
+          <span>assets/projects/nav-stack.jpg</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">ROS 2 · From scratch</p>
+        <h3 class="card__title">Custom ROS 2 Navigation Stack</h3>
+        <p class="card__text">
+          An end-to-end autonomous navigation pipeline: LiDAR and depth perception,
+          A* global planning, reactive local obstacle avoidance, and frontier-based
+          autonomous exploration for when no prior map exists.
+        </p>
+        <ul class="chips"><li>A*</li><li>AMCL</li><li>Exploration</li></ul>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card is-in" data-tags="perception systems" data-reveal="" data-reveal-delay="1">
+      <div class="card__media">
+        <img src="assets/projects/humanoid.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><circle cx="60" cy="22" r="12"></circle><path d="M44 48c0-9 7-14 16-14s16 5 16 14"></path><path d="M52 20h4M64 20h4"></path></svg>
+          <span>assets/projects/humanoid.jpg</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">iHub Robotics · NVIDIA Orin Nano</p>
+        <h3 class="card__title">Semi-Humanoid with AI Perception</h3>
+        <p class="card__text">
+          Real-time face recognition and gesture-based interaction running as
+          onboard inference on an Orin Nano, driving the robot's behavioural
+          responses. Everything had to hold latency on a power budget.
+        </p>
+        <ul class="chips"><li>Edge AI</li><li>OpenCV</li><li>TensorRT</li></ul>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card is-in" data-tags="systems" data-reveal="" data-reveal-delay="2">
+      <div class="card__media">
+        <img src="assets/projects/rosbridge.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><rect x="14" y="20" width="26" height="20" rx="3"></rect><rect x="80" y="20" width="26" height="20" rx="3"></rect><path d="M40 30h40" class="dash"></path><circle cx="60" cy="30" r="4"></circle></svg>
+          <span>assets/projects/rosbridge.jpg</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">Docker · Infrastructure</p>
+        <h3 class="card__title">ROSbridge Container</h3>
+        <p class="card__text">
+          A containerised bridge letting ROS 1 and ROS 2 nodes talk to each other,
+          which unblocked multi-robot integration for a fleet that could not all
+          migrate at once.
+        </p>
+        <ul class="chips"><li>Docker</li><li>ROS 1 ↔ 2</li></ul>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card is-in" data-tags="navigation" data-reveal="">
+      <div class="card__media">
+        <img src="assets/projects/gps-boat.jpg" alt="" loading="lazy" onerror="this.closest(&#39;.card__media&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="card__ph" aria-hidden="true">
+          <svg viewBox="0 0 120 60"><path d="M20 44h80l-10 10H30z"></path><path d="M60 44V16M60 16l22 10-22 8" class="dash"></path></svg>
+          <span>assets/projects/gps-boat.jpg</span>
+        </div>
+      </div>
+      <div class="card__body">
+        <p class="card__meta">Unmanned Surface Vehicle</p>
+        <h3 class="card__title">Autonomous GPS Waypoint Navigation</h3>
+        <p class="card__text">
+          Waypoint tracking and path following for an autonomous boat, fusing GPS
+          and compass to hold a heading against drift on open water.
+        </p>
+        <ul class="chips"><li>GPS</li><li>IMU</li><li>Control</li></ul>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="grid__empty" id="gridEmpty" hidden="">No projects match that filter.</p>
+</section>
+
+
+<!-- ─── research ──────────────────────────────────────────── -->
+<section class="section section--dark" id="research">
+  <div class="section__head">
+    <p class="kicker is-in" data-reveal=""><span class="kicker__num">02</span> Research · in progress</p>
+    <h2 class="section__title is-in" data-reveal="" data-reveal-delay="1">
+      Towards Embodiment-Agnostic<br><em>Human-to-Robot Motion Retargeting</em>
+    </h2>
+    <p class="section__sub is-in" data-reveal="" data-reveal-delay="2">
+      A position paper on open challenges — M.Sc. Autonomous Systems, Hochschule Bonn-Rhein-Sieg
+    </p>
+  </div>
+
+  <div class="paper">
+    <div class="paper__abstract is-in" data-reveal="">
+      <p class="paper__lede">
+        Robots that learn by watching people could shed most of the expert
+        programming that keeps them out of factories, hospitals and homes. The idea
+        is simple: record what a person does, transfer it to a robot. <em>The
+        difficulty lies entirely in the transfer.</em>
+      </p>
+      <p>
+        Human and robot bodies differ in joints, link lengths and degrees of freedom,
+        so copying joint angles almost never produces valid robot motion. A decade of
+        progress has narrowed this gap  but narrowly. Methods get demonstrated on
+        <em>one</em> robot: a Pepper, a NAO, a single dexterous hand. Moving to a new
+        platform means redoing much of the engineering.
+      </p>
+      <p>
+        I argue that this per-robot specialisation, rather than any single technical
+        bottleneck, is now the principal obstacle to scaling demonstration-based
+        robot learning.
+      </p>
+    </div>
+
+    <div class="paper__panel is-in" data-reveal="" data-reveal-delay="1">
+      <div class="tabs" role="tablist" aria-label="Retargeting method families">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="geo">Geometric</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="opt">Optimisation</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="learn">Learning</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="phys">Physics-aware</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel is-active" data-panel="geo" role="tabpanel">
+          <h4>Geometric &amp; kinematic mapping</h4>
+          <p>
+            Define an explicit correspondence between human and robot. Khalil et al.
+            scale human limb vectors proportionally to a Pepper's links  cheap, runs
+            on ordinary video, but sensitive to the noise and depth ambiguity of
+            single-camera pose estimation.
+          </p>
+          <p class="tab-panel__verdict"><span>Trade-off</span> Cheap and interpretable; brittle and low-precision.</p>
+        </div>
+
+        <div class="tab-panel" data-panel="opt" role="tabpanel">
+          <h4>Optimisation-based retargeting</h4>
+          <p>
+            Cast retargeting as a constrained problem: minimise human–robot pose
+            discrepancy subject to joint limits and collision avoidance. DexPilot
+            teleoperates a 23-DoA hand-arm system from four depth cameras watching a
+            bare hand — accurate and general <em>within</em> a hand morphology.
+          </p>
+          <p class="tab-panel__verdict"><span>Trade-off</span> Precise; computationally heavy and cost terms tuned per robot.</p>
+        </div>
+
+        <div class="tab-panel" data-panel="learn" role="tabpanel">
+          <h4>Learning-based retargeting</h4>
+          <p>
+            Replace hand-designed rules with mappings learned from data. Zhang et al.
+            search a compressed latent space for the best-matching robot pose,
+            transferring two-armed sign language across YuMi, NAO and Pepper. The
+            binding constraint is how much matched human–robot data you need.
+          </p>
+          <p class="tab-panel__verdict"><span>Trade-off</span> Scales across robots; starved for paired training data.</p>
+        </div>
+
+        <div class="tab-panel" data-panel="phys" role="tabpanel">
+          <h4>Physics-aware imitation</h4>
+          <p>
+            Enforce dynamic feasibility, not just kinematic similarity — the motion
+            must be executable, not merely reachable. This family speaks directly to
+            the feasibility gap, where a motion comfortable for a person violates a
+            robot's torque limits or is dynamically impossible.
+          </p>
+          <p class="tab-panel__verdict"><span>Trade-off</span> Physically valid; expensive and simulator-dependent.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="problems">
+    <p class="problems__head is-in" data-reveal="">Three open problems cut across all four families</p>
+    <div class="problems__grid">
+      <div class="problem is-in" data-reveal="">
+        <span class="problem__num">01</span>
+        <h4>Feasibility gap</h4>
+        <p>A motion comfortable for a person may violate joint limits, cause self-collision, or be dynamically impossible to execute.</p>
+      </div>
+      <div class="problem is-in" data-reveal="" data-reveal-delay="1">
+        <span class="problem__num">02</span>
+        <h4>Morphology dependence</h4>
+        <p>Structural mismatch and degree-of-freedom mismatch mean the mapping is re-engineered for every new robot body.</p>
+      </div>
+      <div class="problem is-in" data-reveal="" data-reveal-delay="2">
+        <span class="problem__num">03</span>
+        <h4>Input-quality sensitivity</h4>
+        <p>Pipelines degrade sharply as the motion source drops from optical mocap to a single monocular camera.</p>
+      </div>
+    </div>
+
+    <div class="thesis is-in" data-reveal="">
+      <p>
+        <strong>The position.</strong> The next advance must come from
+        <em>embodiment-agnostic</em> retargeting: a pipeline that takes a robot's
+        kinematic and dynamic description — a URDF — as <em>runtime input</em> rather
+        than baking robot-specific parameters into training or design, produces
+        physically feasible trajectories without per-robot cost tuning, and applies
+        across structurally different classes: a serial arm, a humanoid torso, a
+        dexterous hand, with no architectural change.
+      </p>
+      <a class="btn btn--primary" href="assets/Towards_Embodiment_Agnostic_Retargeting.pdf" target="_blank" rel="noopener">
+        Read the full paper (PDF)
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── path / timeline ───────────────────────────────────── -->
+<section class="section" id="path">
+  <div class="section__head">
+    <p class="kicker is-in" data-reveal=""><span class="kicker__num">03</span> Path</p>
+    <h2 class="section__title is-in" data-reveal="" data-reveal-delay="1">
+      Mechatronics, then robots,<br><em>then the theory behind them.</em>
+    </h2>
+  </div>
+
+  <ol class="timeline" id="timeline">
+    <span class="timeline__rail" aria-hidden="true"><i id="timelineFill" style="--fill: 0.0000;"></i></span>
+
+    <li class="tl is-in" data-reveal="">
+      <span class="tl__dot" aria-hidden="true"></span>
+      <div class="tl__when">Mar 2025 — present</div>
+      <div class="tl__what">
+        <p class="tl__where">Hochschule Bonn-Rhein-Sieg <span class="tl__tag">Education</span></p>
+        <h3>M.Sc. Autonomous Systems</h3>
+        <p class="tl__place">Sankt Augustin, Germany</p>
+        <p>
+          Deepening the theory under the systems I had been building by hand 
+          estimation, learning from demonstration, and planning. Currently on the
+          BRS Motorsport driverless team and writing on motion retargeting.
+        </p>
+      </div>
+    </li>
+
+    <li class="tl is-in" data-reveal="">
+      <span class="tl__dot" aria-hidden="true"></span>
+      <div class="tl__when">Dec 2023 — Nov 2024</div>
+      <div class="tl__what">
+        <p class="tl__where">iHub Robotics <span class="tl__tag tl__tag--work">Robotics Engineer</span></p>
+        <h3>Navigation, perception &amp; HRI for service robots</h3>
+        <p class="tl__place">Cochin, India</p>
+        <ul>
+          <li>Built navigation and path-planning modules for semi-humanoid and service robots in dynamic, unstructured environments.</li>
+          <li>Fused LiDAR and depth data into mapping and localisation pipelines; validated the full nav stack in Gazebo and Isaac Sim before it ever touched hardware.</li>
+          <li>Processed point clouds with PCL for clustering and real-time obstacle detection.</li>
+          <li>Integrated face recognition, gesture interaction and voice for natural human-robot interaction.</li>
+          <li>Deployed real-time perception and onboard inference to NVIDIA Orin Nano and Jetson under hard resource constraints.</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="tl is-in" data-reveal="">
+      <span class="tl__dot" aria-hidden="true"></span>
+      <div class="tl__when">Dec 2022 — May 2023</div>
+      <div class="tl__what">
+        <p class="tl__where">Bharat Electronics Limited <span class="tl__tag tl__tag--work">Apprentice</span></p>
+        <h3>Network Centric Systems — QA &amp; validation</h3>
+        <p class="tl__place">Bangalore, India</p>
+        <ul>
+          <li>Functional testing and diagnostics of communication and electronic systems with electronic test equipment.</li>
+          <li>Documented test procedures and worked with senior engineers to troubleshoot faults against quality standards.</li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="tl is-in" data-reveal="">
+      <span class="tl__dot" aria-hidden="true"></span>
+      <div class="tl__when">Aug 2018 — Jun 2022</div>
+      <div class="tl__what">
+        <p class="tl__where">APJ Abdul Kalam Technological University <span class="tl__tag">Education</span></p>
+        <h3>B.Tech. Mechatronics Engineering</h3>
+        <p class="tl__place">Thrissur, India</p>
+        <p>Where the mechanical, electronic and software halves of a robot first stopped being separate subjects.</p>
+      </div>
+    </li>
+  </ol>
+
+  <!-- award -->
+  <div class="award is-in" data-reveal="">
+    <div class="award__badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path d="M12 2.6l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.6 6.6 19.5l1-6.1L3.2 9.1l6.1-.9z"></path></svg>
+    </div>
+    <div>
+      <p class="award__meta">Junction 2025 · Espoo, Finland</p>
+      <h3>First Prize — DENSO Challenge</h3>
+      <p>
+        Built an intelligent EV charging orchestration platform using GenAI (Gemini)
+        for a challenge on digital identities for vehicles and charging stations.
+        Won it against the field, in a weekend.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── about ─────────────────────────────────────────────── -->
+<section class="section section--tint" id="about">
+  <div class="about">
+    <div class="about__portrait is-in" data-reveal="">
+      <div class="portrait">
+        <img src="assets/headshot.jpg" alt="Al Shafi V A" loading="lazy" onerror="this.closest(&#39;.portrait&#39;).classList.add(&#39;is-empty&#39;)">
+        <div class="portrait__ph" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"></circle><path d="M4.5 20.5a7.5 7.5 0 0 1 15 0"></path></svg>
+          <span>assets/headshot.jpg</span>
+        </div>
+        <span class="portrait__frame" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="about__text">
+      <p class="kicker is-in" data-reveal=""><span class="kicker__num">04</span> About</p>
+      <h2 class="section__title section__title--sm is-in" data-reveal="" data-reveal-delay="1">
+        I like problems where the map<br><em>runs out.</em>
+      </h2>
+
+      <div data-reveal="" data-reveal-delay="2" class="is-in">
+        <p>
+          I am a Master's student in Autonomous Systems at Hochschule Bonn-Rhein-Sieg,
+          with three years of engineering behind me in autonomous mobile robotics,
+          sensor fusion, and AI-based perception.
+        </p>
+        <p>
+          Most of my work has lived in the gap between a clean simulation and a messy
+          room. A nav stack that behaves perfectly in Gazebo meets a corridor with
+          glass walls and reflective floors; a face-recognition model that hits its
+          benchmark drops frames on an Orin Nano at 15 watts. I find that gap the
+          interesting part of the job, and I have spent most of my career closing it 
+          on service robots, semi-humanoids, an autonomous boat, and now a driverless
+          racing car.
+        </p>
+        <p>
+          I am looking for roles where autonomy, perception and mobility meet real
+          hardware. I am based in Bonn and open to relocating within Germany and the EU.
+        </p>
+      </div>
+
+      <div class="skills is-in" data-reveal="" data-reveal-delay="3">
+        <div class="skillset">
+          <h4>Languages</h4>
+          <ul class="chips chips--lg"><li>Python 3</li><li>C++</li><li>Linux</li></ul>
+        </div>
+        <div class="skillset">
+          <h4>Robotics &amp; navigation</h4>
+          <ul class="chips chips--lg"><li>ROS 1</li><li>ROS 2</li><li>SLAM</li><li>Path Planning</li><li>AMCL</li><li>MoveIt</li></ul>
+        </div>
+        <div class="skillset">
+          <h4>Perception &amp; vision</h4>
+          <ul class="chips chips--lg"><li>YOLO</li><li>OpenCV</li><li>LiDAR Processing</li><li>PCL</li><li>PyTorch</li><li>TensorFlow</li></ul>
+        </div>
+        <div class="skillset">
+          <h4>Estimation</h4>
+          <ul class="chips chips--lg"><li>Kalman Filter</li><li>Extended KF</li><li>Particle Filter</li></ul>
+        </div>
+        <div class="skillset">
+          <h4>Simulation</h4>
+          <ul class="chips chips--lg"><li>Gazebo</li><li>Isaac Sim</li><li>CARLA</li><li>Webots</li></ul>
+        </div>
+        <div class="skillset">
+          <h4>Kinematics &amp; tools</h4>
+          <ul class="chips chips--lg"><li>Forward / Inverse Kinematics</li><li>DH Parameters</li><li>Docker</li><li>Git</li><li>Fusion 360</li></ul>
+        </div>
+      </div>
+
+      <div class="langs is-in" data-reveal="">
+        <div class="lang"><span>Malayalam</span><i class="bar"><b style="--lvl:100%"></b></i><em>Native</em></div>
+        <div class="lang"><span>English</span><i class="bar"><b style="--lvl:88%"></b></i><em>Fluent · C1</em></div>
+        <div class="lang"><span>German</span><i class="bar"><b style="--lvl:22%"></b></i><em>A1 · learning</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── contact ───────────────────────────────────────────── -->
+<section class="section contact" id="contact">
+  <p class="kicker is-in" data-reveal=""><span class="kicker__num">05</span> Contact</p>
+  <h2 class="contact__title is-in" data-reveal="" data-reveal-delay="1">
+    Let's build something<br>that moves on its own.
+  </h2>
+  <p class="contact__sub is-in" data-reveal="" data-reveal-delay="2">
+    Open to Working Student, Internship and full-time Robotics / Perception roles
+    from 2026. Based in Bonn, Germany.
+  </p>
+
+  <div class="contact__links is-in" data-reveal="" data-reveal-delay="3">
+    <a class="clink" href="mailto:alshafivaofficial@gmail.com">
+      <span class="clink__label">Email</span>
+      <span class="clink__value">alshafivaofficial@gmail.com</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+    </a>
+    <a class="clink" href="https://www.linkedin.com/in/al-shafi-a433271a0" target="_blank" rel="noopener">
+      <span class="clink__label">LinkedIn</span>
+      <span class="clink__value">al-shafi-a433271a0</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+    </a>
+    <a class="clink" href="https://github.com/shafisterritory" target="_blank" rel="noopener">
+      <span class="clink__label">GitHub</span>
+      <span class="clink__value">shafisterritory</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+    </a>
+    <a class="clink" href="tel:+491603245832">
+      <span class="clink__label">Phone</span>
+      <span class="clink__value">+49 1603 245832</span>
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p>© <span id="year">2026</span> Al Shafi V A · Bonn, Germany</p>
+  <p class="foot__note">Hero is a live 2D LiDAR simulation — ray casting and clustering, rendered on canvas.</p>
+</footer>
+
+<script src="./Al Shafi V A — Autonomous Systems Engineer_files/lidar.js"></script>
+<script src="./Al Shafi V A — Autonomous Systems Engineer_files/main.js"></script>
+
+
+</body></html>

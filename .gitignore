@@ -1,0 +1,14 @@
+# Hidden files
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Browser-saved duplicates (index.html is the source)
+# If you want to keep them un-tracked:
+# *_files/
